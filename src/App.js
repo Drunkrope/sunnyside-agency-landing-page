@@ -1,8 +1,10 @@
 import "./App.css";
-import { ReactComponent as Facebook } from "./assets/images/icon-facebook.svg";
-import { ReactComponent as Instagram } from "./assets/images/icon-instagram.svg";
-import { ReactComponent as Twitter } from "./assets/images/icon-twitter.svg";
-import { ReactComponent as Pinterest } from "./assets/images/icon-pinterest.svg";
+import Footer from "./components/Footer/Footer.js";
+
+import milkBottles from "./assets/images/mobile/image-gallery-milkbottles.jpg";
+import orange from "./assets/images/mobile/image-gallery-orange.jpg";
+import cone from "./assets/images/mobile/image-gallery-cone.jpg";
+import sugarCube from "./assets/images/mobile/image-gallery-sugar-cubes.jpg";
 
 function App() {
   return (
@@ -25,72 +27,41 @@ function App() {
         attention. <br />
         Photography Increase your credibility by getting the most stunning,
         high-quality photos that improve your business image. <br />
-        Client testimonials We put our trust in Sunnyside and they delivered,
-        making sure our needs were met and deadlines were always hit. <br />
-        Emily R. Marketing Director Sunnyside’s enthusiasm coupled with their
-        keen interest in our brand’s success made it a satisfying and enjoyable
-        experience. Thomas S. Chief Operating Officer <br />
-        Incredible end result! Our sales increased over 400% when we worked with
-        Sunnyside. Highly recommended! Jennie F. Business Owner <br />
+        <section>
+          <h2>Client testimonials</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3">
+            <div>
+              <img src="" alt="" />
+              <p>
+                We put our trust in Sunnyside and they delivered, making sure
+                our needs were met and deadlines were always hit.
+              </p>
+              <h3>Emily R.</h3>
+              <h4>Marketing Director </h4>
+            </div>
+            <div>
+              Sunnyside’s enthusiasm coupled with their keen interest in our
+              brand’s success made it a satisfying and enjoyable experience.
+              Thomas S. Chief Operating Officer
+            </div>
+            <div>
+              Incredible end result! Our sales increased over 400% when we
+              worked with Sunnyside. Highly recommended! Jennie F. Business
+              Owner
+            </div>
+          </div>
+        </section>
+        <section>
+          <div className="grid grid-cols-2 md:grid-cols-4 g-0">
+            <img src={milkBottles} alt="milk bottles" className="w-full" />
+            <img src={orange} alt="orange" className="w-full" />
+            <img src={cone} alt="cone" className="w-full" />
+            <img src={sugarCube} alt="sugar cube" className="w-full" />
+          </div>
+        </section>
       </main>
 
-      <footer className="bg-dark-moderate-cyan py-10">
-        <div className="text-center">
-          <a
-            href="#top"
-            className="text-3xl text-dark-desaturated-cyan font-semibold"
-          >
-            sunnyside
-          </a>
-        </div>
-
-        <div className="flex justify-center mt-8 mb-16">
-          <a href="#top" className="mx-3 text-lg text-dark-desaturated-cyan">
-            About
-          </a>
-          <a href="#top" className="mx-3 text-lg text-dark-desaturated-cyan">
-            Services
-          </a>
-          <a href="#top" className="mx-3 text-lg text-dark-desaturated-cyan">
-            Projects
-          </a>
-        </div>
-        <div className="flex justify-center mb-3">
-          <a href="#top" className="mx-3">
-            <Facebook />
-          </a>
-          <a href="#top" className="mx-3">
-            <Instagram />
-          </a>
-          <a href="#top" className="mx-3">
-            <Twitter />
-          </a>
-          <a href="#top" className="mx-3">
-            <Pinterest />
-          </a>
-        </div>
-        <div className="text-center text-white">
-          Challenge by{" "}
-          <a
-            href="https://www.frontendmentor.io?ref=challenge"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Frontend Mentor
-          </a>
-          . <br />
-          Coded by{" "}
-          <a
-            href="https://github.com/Drunkrope"
-            target="_blank"
-            rel="noreferrer"
-            className="text-green-400"
-          >
-            Flavio Benitez (DrunkRope)
-          </a>
-          .
-        </div>
-      </footer>
+      <Footer />
     </>
   );
 }
