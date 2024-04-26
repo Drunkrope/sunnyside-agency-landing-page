@@ -1,3 +1,5 @@
+import logo from "assets/images/logo.svg";
+
 import { ReactComponent as Facebook } from "assets/images/icon-facebook.svg";
 import { ReactComponent as Instagram } from "assets/images/icon-instagram.svg";
 import { ReactComponent as Twitter } from "assets/images/icon-twitter.svg";
@@ -5,14 +7,9 @@ import { ReactComponent as Pinterest } from "assets/images/icon-pinterest.svg";
 
 function Footer() {
   return (
-    <footer className="bg-dark-moderate-cyan py-10">
+    <footer className="bg-moderate-cyan py-10">
       <div className="text-center">
-        <a
-          href="#top"
-          className="text-3xl text-dark-desaturated-cyan font-semibold"
-        >
-          sunnyside
-        </a>
+        <img src={logo} alt="sunnyside" className="mx-auto" />
       </div>
 
       <div className="flex justify-center mt-8 mb-16">
