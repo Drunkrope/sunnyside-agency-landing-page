@@ -1,4 +1,5 @@
-import logo from "assets/images/logo.svg";
+import "./Footer.css";
+import { ReactComponent as Logo } from "assets/images/logo.svg";
 
 import { ReactComponent as Facebook } from "assets/images/icon-facebook.svg";
 import { ReactComponent as Instagram } from "assets/images/icon-instagram.svg";
@@ -8,18 +9,20 @@ import { ReactComponent as Pinterest } from "assets/images/icon-pinterest.svg";
 function Footer() {
   return (
     <footer className="bg-moderate-cyan py-10">
-      <div className="text-center">
-        <img src={logo} alt="sunnyside" className="mx-auto" />
+      <div className="flex justify-center">
+        <a href="#top" className="block">
+          <Logo />
+        </a>
       </div>
 
       <div className="flex justify-center mt-8 mb-16">
-        <a href="#top" className="mx-3 text-lg text-dark-desaturated-cyan">
+        <a href="#top" className="mx-3 text-lg">
           About
         </a>
-        <a href="#top" className="mx-3 text-lg text-dark-desaturated-cyan">
+        <a href="#top" className="mx-3 text-lg">
           Services
         </a>
-        <a href="#top" className="mx-3 text-lg text-dark-desaturated-cyan">
+        <a href="#top" className="mx-3 text-lg">
           Projects
         </a>
       </div>
@@ -48,12 +51,7 @@ function Footer() {
         </a>
         . <br />
         Coded by{" "}
-        <a
-          href="https://github.com/Drunkrope"
-          target="_blank"
-          rel="noreferrer"
-          className="text-green-400"
-        >
+        <a href="https://github.com/Drunkrope" target="_blank" rel="noreferrer">
           Flavio Benitez (DrunkRope)
         </a>
         .

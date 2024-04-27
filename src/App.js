@@ -1,7 +1,7 @@
 import "./App.css";
 import Footer from "./components/Footer/Footer.js";
 
-import logo from "./assets/images/logo.svg";
+import { ReactComponent as Logo } from "assets/images/logo.svg";
 
 import transform from "./assets/images/mobile/image-transform.jpg";
 import transformDesktop from "./assets/images/desktop/image-transform.jpg";
@@ -26,13 +26,33 @@ import coneDesktop from "./assets/images/desktop/image-gallery-cone.jpg";
 import sugarCube from "./assets/images/mobile/image-gallery-sugar-cubes.jpg";
 import sugarCubeDesktop from "./assets/images/desktop/image-gallery-sugar-cubes.jpg";
 
+import React, { useState, useEffect, useRef } from "react";
+
 function App() {
+  const [containerWidth, setContainerWidth] = useState(0);
+  const containerRef = useRef(null);
+
+  const handleResize = () => {
+    if (containerRef.current) {
+      setContainerWidth(containerRef.current.offsetWidth);
+    }
+  };
+
+  useEffect(() => {
+    handleResize(); // Call the function once to get the initial width
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <>
       <header>About Services Projects Contact</header>
       <main>
         We are creatives
-        <img src={logo} alt="" className="bg-red-300" />
+        <Logo />
         <br />
         <section>
           <div className="grid grid-cols-2">
@@ -137,11 +157,30 @@ function App() {
         <div className="p-3 bg-dark-grayish-blue"></div>
         <div className="p-3 bg-grayish-blue"></div>
         <section>
-          <div className="grid grid-cols-2 md:grid-cols-4 g-0">
-            <img src={milkBottles} alt="milk bottles" className="w-full" />
-            <img src={orange} alt="orange" className="w-full" />
-            <img src={cone} alt="cone" className="w-full" />
-            <img src={sugarCube} alt="sugar cube" className="w-full" />
+          <div
+            className="grid grid-cols-2 md:grid-cols-4 g-0"
+            ref={containerRef}
+          >
+            <img
+              src={containerWidth <= 768 ? milkBottles : milkBottlesDesktop}
+              alt="Milk Bottles"
+              className="w-full"
+            />
+            <img
+              src={containerWidth <= 768 ? orange : orangeDesktop}
+              alt="Orange"
+              className="w-full"
+            />
+            <img
+              src={containerWidth <= 768 ? cone : coneDesktop}
+              alt="Cone"
+              className="w-full"
+            />
+            <img
+              src={containerWidth <= 768 ? sugarCube : sugarCubeDesktop}
+              alt="Sugar Cube"
+              className="w-full"
+            />
           </div>
         </section>
       </main>

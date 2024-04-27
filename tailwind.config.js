@@ -2,6 +2,10 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
+    fontFamily: {
+      Barlow: ["Barlow"],
+      Fraunces: ["Fraunces"],
+    },
     extend: {
       colors: {
         "soft-red": "hsl(7, 99%, 70%)",
