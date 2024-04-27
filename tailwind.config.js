@@ -2,6 +2,9 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
+    letterSpacing: {
+      super: ".2em",
+    },
     fontFamily: {
       Barlow: ["Barlow"],
       Fraunces: ["Fraunces"],

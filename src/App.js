@@ -26,161 +26,193 @@ import coneDesktop from "./assets/images/desktop/image-gallery-cone.jpg";
 import sugarCube from "./assets/images/mobile/image-gallery-sugar-cubes.jpg";
 import sugarCubeDesktop from "./assets/images/desktop/image-gallery-sugar-cubes.jpg";
 
-import React, { useState, useEffect, useRef } from "react";
-
 function App() {
-  const [containerWidth, setContainerWidth] = useState(0);
-  const containerRef = useRef(null);
-
-  const handleResize = () => {
-    if (containerRef.current) {
-      setContainerWidth(containerRef.current.offsetWidth);
-    }
-  };
-
-  useEffect(() => {
-    handleResize(); // Call the function once to get the initial width
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
   return (
     <>
-      <header>About Services Projects Contact</header>
-      <main>
+      <header>
+        About Services Projects Contact <br />
         We are creatives
         <Logo />
+      </header>
+      <main>
         <br />
         <section>
-          <div className="grid grid-cols-2">
-            <div className="flex flex-col justify-center items-center text-center">
-              <h2>Transform your brand</h2>
-              <p>
+          <div className="flex flex-col-reverse md:flex-row">
+            <div className="basis-6/12 flex flex-col justify-center items-center text-center md:text-left px-6 py-16">
+              <h2 className="font-Fraunces text-very-dark-desaturated-blue font-bold text-4xl">
+                Transform your brand
+              </h2>
+              <p className="my-7 font-Barlow text-lg text-dark-grayish-blue">
                 We are a full-service creative agency specializing in helping
                 brands grow fast. Engage your clients through compelling visuals
                 that do most of the marketing for you.
               </p>
-              <a href="#top">Learn more</a>
+
+              <a
+                href="#top"
+                className="font-Fraunces uppercase text-very-dark-desaturated-blue w-full text-center md:text-left font-bold text-lg relative z-10 after:content-[''] after:pb-3 after:bg-new-yellow after:rounded-full after:absolute after:w-32 after:left-0 after:bottom-0 after:opacity-20 "
+              >
+                Learn more
+              </a>
             </div>
-            <div>
-              <img src={transform} alt="egg" className="w-full" />
+            <div className="basis-6/12">
+              <picture>
+                <source media="(min-width:768px)" srcset={transformDesktop} />
+                <img src={transform} alt="egg" className="w-full" />
+              </picture>
             </div>
           </div>
         </section>
         <section>
-          <div className="grid grid-cols-2">
-            <div>
-              <img src={standOut} alt="red glass" className="w-full" />
+          <div className="flex flex-col md:flex-row">
+            <div className="basis-6/12">
+              <picture>
+                <source media="(min-width:768px)" srcset={standOutDesktop} />
+                <img src={standOut} alt="red glass" className="w-full" />
+              </picture>
             </div>
-            <div className="flex flex-col justify-center items-center text-center">
-              <h2>Stand out to the right audience</h2>
-              <p>
+            <div className="basis-6/12 flex flex-col justify-center items-center text-center md:text-left px-6 py-16">
+              <h2 className="font-Fraunces text-very-dark-desaturated-blue font-bold text-4xl">
+                Stand out to the right audience
+              </h2>
+              <p className="my-7 font-Barlow text-lg text-dark-grayish-blue">
                 Using a collaborative formula of designers, researchers,
                 photographers, videographers, and copywriters, we’ll build and
                 extend your brand in digital places.
               </p>
-              <a href="#top">Learn more</a>
+
+              <a
+                href="#top"
+                className="font-Fraunces uppercase text-very-dark-desaturated-blue w-full text-center md:text-left font-bold text-lg relative z-10 after:content-[''] after:pb-3 after:bg-soft-red after:rounded-full after:absolute after:w-32 after:left-0 after:bottom-0 after:opacity-20 "
+              >
+                Learn more
+              </a>
             </div>
           </div>
         </section>
         <section>
-          <div className="grid grid-cols-2">
+          <div className="grid grid-cols-1 md:grid-cols-2">
             <div className="text-dark-desaturated-cyan text-center">
-              <img src={graphicDesign} alt="cherry" className="w-full" />
-              <h2>Graphic design</h2>
-              <p>
+              <picture>
+                <source
+                  media="(min-width:768px)"
+                  srcset={graphicDesignDesktop}
+                />
+                <img src={graphicDesign} alt="Cherry" />
+              </picture>
+              <h2 className="text-3xl font-Fraunces font-bold mb-8">
+                Graphic design
+              </h2>
+              <p className="text-md mx-3">
                 Great design makes you memorable. We deliver artwork that
                 underscores your brand message and captures potential clients’
                 attention.
               </p>
             </div>
             <div className="text-dark-blue text-center">
-              <img src={photography} alt="orange" className="w-full" />
-              <h2>Photography</h2>
-              <p>
+              <picture>
+                <source media="(min-width:768px)" srcset={photographyDesktop} />
+                <img src={photography} alt="Orange" />
+              </picture>
+              <h2 className="text-3xl font-Fraunces font-bold mb-8">
+                Photography
+              </h2>
+              <p className="text-md mx-3">
                 Increase your credibility by getting the most stunning,
                 high-quality photos that improve your business image.
               </p>
             </div>
           </div>
         </section>
+        {/* Client Testimonials */}
         <section className="py-20 container mx-auto">
-          <h2 className="text-center">Client testimonials</h2>
+          <h2 className="text-center text-lg uppercase font-Fraunces text-grayish-blue font-bold tracking-super">
+            Client testimonials
+          </h2>
+
           <div className="grid grid-cols-1 md:grid-cols-3">
-            <div className="text-center">
-              <img src={emily} alt="Emily R" className="mx-auto rounded-full" />
-              <p>
+            <div className="text-center mt-16">
+              <img
+                src={emily}
+                alt="Emily R"
+                className="mx-auto rounded-full w-3/12"
+              />
+              <p className="my-12 font-Barlow text-lg mx-7">
                 We put our trust in Sunnyside and they delivered, making sure
                 our needs were met and deadlines were always hit.
               </p>
-              <h3>Emily R.</h3>
-              <h4>Marketing Director </h4>
+              <h3 className="font-Fraunces text-very-dark-desaturated-blue font-bold">
+                Emily R.
+              </h3>
+              <h4 className="font-Barlow text-grayish-blue font-semibold">
+                Marketing Director{" "}
+              </h4>
             </div>
-            <div className="text-center">
+            <div className="text-center mt-16">
               <img
                 src={thomas}
                 alt="Thomas S"
-                className="mx-auto rounded-full"
+                className="mx-auto rounded-full w-3/12"
               />
-              <p>
+              <p className="my-12 font-Barlow text-lg mx-7">
                 Sunnyside’s enthusiasm coupled with their keen interest in our
                 brand’s success made it a satisfying and enjoyable experience.
               </p>
-              <h3>Thomas S.</h3>
-              <h4>Chief Operating Officer</h4>
+              <h3 className="font-Fraunces text-very-dark-desaturated-blue font-bold">
+                Thomas S.
+              </h3>
+              <h4 className="font-Barlow text-grayish-blue font-semibold">
+                Chief Operating Officer
+              </h4>
             </div>
-            <div className="text-center">
+            <div className="text-center mt-16">
               <img
                 src={jennie}
                 alt="Jennie F"
-                className="mx-auto rounded-full"
+                className="mx-auto rounded-full w-3/12"
               />
-              <p>
+              <p className="my-12 font-Barlow text-lg mx-7">
                 Incredible end result! Our sales increased over 400% when we
                 worked with Sunnyside. Highly recommended!
               </p>
-              <h3>Jennie F.</h3>
-              <h4>Business Owner</h4>
+              <h3 className="font-Fraunces text-very-dark-desaturated-blue font-bold">
+                Jennie F.
+              </h3>
+              <h4 className="font-Barlow text-grayish-blue font-semiblod">
+                Business Owner
+              </h4>
             </div>
           </div>
         </section>
-        <div className="bg-soft-red p-3"></div>
-        <div className="p-3 bg-new-yellow"></div>
-        <div className="p-3 bg-dark-desaturated-cyan"></div>
-        <div className="p-3 bg-dark-blue"></div>
-        <div className="p-3 bg-dark-moderate-cyan"></div>
-        <div className="p-3 bg-very-dark-desaturated-blue"></div>
-        <div className="p-3 bg-very-dark-grayish-blue"></div>
-        <div className="p-3 bg-dark-grayish-blue"></div>
-        <div className="p-3 bg-grayish-blue"></div>
+        {/* Color Picker */}
         <section>
-          <div
-            className="grid grid-cols-2 md:grid-cols-4 g-0"
-            ref={containerRef}
-          >
-            <img
-              src={containerWidth <= 768 ? milkBottles : milkBottlesDesktop}
-              alt="Milk Bottles"
-              className="w-full"
-            />
-            <img
-              src={containerWidth <= 768 ? orange : orangeDesktop}
-              alt="Orange"
-              className="w-full"
-            />
-            <img
-              src={containerWidth <= 768 ? cone : coneDesktop}
-              alt="Cone"
-              className="w-full"
-            />
-            <img
-              src={containerWidth <= 768 ? sugarCube : sugarCubeDesktop}
-              alt="Sugar Cube"
-              className="w-full"
-            />
+          <div className="p-3 bg-dark-desaturated-cyan"></div>
+          <div className="p-3 bg-dark-blue"></div>
+          <div className="p-3 bg-dark-moderate-cyan"></div>
+          <div className="p-3 bg-very-dark-desaturated-blue"></div>
+          <div className="p-3 bg-very-dark-grayish-blue"></div>
+          <div className="p-3 bg-dark-grayish-blue"></div>
+          <div className="p-3 bg-grayish-blue"></div>
+        </section>
+        {/* Image Gallary */}
+        <section>
+          <div className="grid grid-cols-2 md:grid-cols-4 g-0">
+            <picture>
+              <source media="(min-width:768px)" srcset={milkBottlesDesktop} />
+              <img src={milkBottles} alt="Milkbottles" />
+            </picture>
+            <picture>
+              <source media="(min-width:768px)" srcset={orangeDesktop} />
+              <img src={orange} alt="Orange" />
+            </picture>
+            <picture>
+              <source media="(min-width:768px)" srcset={coneDesktop} />
+              <img src={cone} alt="Cone" />
+            </picture>
+            <picture>
+              <source media="(min-width:768px)" srcset={sugarCubeDesktop} />
+              <img src={sugarCube} alt="Sugar Cube" />
+            </picture>
           </div>
         </section>
       </main>
