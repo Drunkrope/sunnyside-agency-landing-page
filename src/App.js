@@ -92,35 +92,39 @@ function App() {
         </section>
         <section>
           <div className="grid grid-cols-1 md:grid-cols-2">
-            <div className="text-dark-desaturated-cyan text-center">
+            <div className="text-dark-desaturated-cyan text-center relative">
               <picture>
                 <source
                   media="(min-width:768px)"
                   srcset={graphicDesignDesktop}
                 />
-                <img src={graphicDesign} alt="Cherry" />
+                <img src={graphicDesign} alt="Cherry" className="w-full" />
               </picture>
-              <h2 className="text-3xl font-Fraunces font-bold mb-8">
-                Graphic design
-              </h2>
-              <p className="text-md mx-3">
-                Great design makes you memorable. We deliver artwork that
-                underscores your brand message and captures potential clients’
-                attention.
-              </p>
+              <div className="absolute -translate-x-1/2 w-7/12 bottom-14 left-2/4">
+                <h2 className="text-3xl font-Fraunces font-bold mb-8">
+                  Graphic design
+                </h2>
+                <p className="text-lg mx-3">
+                  Great design makes you memorable. We deliver artwork that
+                  underscores your brand message and captures potential clients’
+                  attention.
+                </p>
+              </div>
             </div>
-            <div className="text-dark-blue text-center">
+            <div className="text-dark-blue text-center relative">
               <picture>
                 <source media="(min-width:768px)" srcset={photographyDesktop} />
-                <img src={photography} alt="Orange" />
+                <img src={photography} alt="Orange" className="w-full" />
               </picture>
-              <h2 className="text-3xl font-Fraunces font-bold mb-8">
-                Photography
-              </h2>
-              <p className="text-md mx-3">
-                Increase your credibility by getting the most stunning,
-                high-quality photos that improve your business image.
-              </p>
+              <div className="absolute -translate-x-1/2 w-7/12 bottom-14 left-2/4">
+                <h2 className="text-3xl font-Fraunces font-bold mb-8">
+                  Photography
+                </h2>
+                <p className="text-lg mx-3">
+                  Increase your credibility by getting the most stunning,
+                  high-quality photos that improve your business image.
+                </p>
+              </div>
             </div>
           </div>
         </section>
@@ -199,19 +203,19 @@ function App() {
           <div className="grid grid-cols-2 md:grid-cols-4 g-0">
             <picture>
               <source media="(min-width:768px)" srcset={milkBottlesDesktop} />
-              <img src={milkBottles} alt="Milkbottles" />
+              <img src={milkBottles} alt="Milkbottles" className="w-full" />
             </picture>
             <picture>
               <source media="(min-width:768px)" srcset={orangeDesktop} />
-              <img src={orange} alt="Orange" />
+              <img src={orange} alt="Orange" className="w-full" />
             </picture>
             <picture>
               <source media="(min-width:768px)" srcset={coneDesktop} />
-              <img src={cone} alt="Cone" />
+              <img src={cone} alt="Cone" className="w-full" />
             </picture>
             <picture>
               <source media="(min-width:768px)" srcset={sugarCubeDesktop} />
-              <img src={sugarCube} alt="Sugar Cube" />
+              <img src={sugarCube} alt="Sugar Cube" className="w-full" />
             </picture>
           </div>
         </section>
