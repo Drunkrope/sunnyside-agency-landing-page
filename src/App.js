@@ -1,7 +1,6 @@
 import "./App.css";
+import Hearder from "./components/Header/Header.js";
 import Footer from "./components/Footer/Footer.js";
-
-import { ReactComponent as Logo } from "assets/images/logo.svg";
 
 import transform from "./assets/images/mobile/image-transform.jpg";
 import transformDesktop from "./assets/images/desktop/image-transform.jpg";
@@ -29,13 +28,9 @@ import sugarCubeDesktop from "./assets/images/desktop/image-gallery-sugar-cubes.
 function App() {
   return (
     <>
-      <header>
-        About Services Projects Contact <br />
-        We are creatives
-        <Logo />
-      </header>
+      <Hearder />
+
       <main>
-        <br />
         <section>
           <div className="flex flex-col-reverse md:flex-row">
             <div className="basis-6/12 flex flex-col justify-center items-center text-center md:text-left px-6 py-16">
@@ -50,14 +45,14 @@ function App() {
 
               <a
                 href="#top"
-                className="font-Fraunces uppercase text-very-dark-desaturated-blue w-full text-center md:text-left font-bold text-lg relative z-10 after:content-[''] after:pb-3 after:bg-new-yellow after:rounded-full after:absolute after:w-32 after:left-0 after:bottom-0 after:opacity-20 "
+                className="font-Fraunces uppercase text-very-dark-desaturated-blue w-full text-center md:text-left font-bold text-lg relative after:content-[''] after:pb-3 after:bg-new-yellow after:rounded-full after:absolute after:w-32 after:-translate-x-1/2 after:left-1/2 after:bottom-0 after:opacity-20 "
               >
                 Learn more
               </a>
             </div>
             <div className="basis-6/12">
               <picture>
-                <source media="(min-width:768px)" srcset={transformDesktop} />
+                <source media="(min-width:768px)" srcSet={transformDesktop} />
                 <img src={transform} alt="egg" className="w-full" />
               </picture>
             </div>
@@ -67,7 +62,7 @@ function App() {
           <div className="flex flex-col md:flex-row">
             <div className="basis-6/12">
               <picture>
-                <source media="(min-width:768px)" srcset={standOutDesktop} />
+                <source media="(min-width:768px)" srcSet={standOutDesktop} />
                 <img src={standOut} alt="red glass" className="w-full" />
               </picture>
             </div>
@@ -75,7 +70,7 @@ function App() {
               <h2 className="font-Fraunces text-very-dark-desaturated-blue font-bold text-4xl">
                 Stand out to the right audience
               </h2>
-              <p className="my-7 font-Barlow text-lg text-dark-grayish-blue">
+              <p className="my-7 font-Barlow text-lg font-semibold text-dark-grayish-blue">
                 Using a collaborative formula of designers, researchers,
                 photographers, videographers, and copywriters, we’ll build and
                 extend your brand in digital places.
@@ -83,7 +78,7 @@ function App() {
 
               <a
                 href="#top"
-                className="font-Fraunces uppercase text-very-dark-desaturated-blue w-full text-center md:text-left font-bold text-lg relative z-10 after:content-[''] after:pb-3 after:bg-soft-red after:rounded-full after:absolute after:w-32 after:left-0 after:bottom-0 after:opacity-20 "
+                className="font-Fraunces uppercase text-very-dark-desaturated-blue w-full text-center md:text-left font-bold text-lg relative after:content-[''] after:pb-3 after:bg-soft-red after:rounded-full after:absolute after:w-32 after:left-1/2 after:-translate-x-1/2 after:bottom-0 after:opacity-20 "
               >
                 Learn more
               </a>
@@ -96,15 +91,15 @@ function App() {
               <picture>
                 <source
                   media="(min-width:768px)"
-                  srcset={graphicDesignDesktop}
+                  srcSet={graphicDesignDesktop}
                 />
                 <img src={graphicDesign} alt="Cherry" className="w-full" />
               </picture>
-              <div className="absolute -translate-x-1/2 w-7/12 bottom-14 left-2/4">
+              <div className="absolute -translate-x-1/2 w-full bottom-14 left-2/4">
                 <h2 className="text-3xl font-Fraunces font-bold mb-8">
                   Graphic design
                 </h2>
-                <p className="text-lg mx-3">
+                <p className="text-md font-semibold">
                   Great design makes you memorable. We deliver artwork that
                   underscores your brand message and captures potential clients’
                   attention.
@@ -113,14 +108,14 @@ function App() {
             </div>
             <div className="text-dark-blue text-center relative">
               <picture>
-                <source media="(min-width:768px)" srcset={photographyDesktop} />
+                <source media="(min-width:768px)" srcSet={photographyDesktop} />
                 <img src={photography} alt="Orange" className="w-full" />
               </picture>
-              <div className="absolute -translate-x-1/2 w-7/12 bottom-14 left-2/4">
+              <div className="absolute -translate-x-1/2 w-full bottom-14 left-2/4">
                 <h2 className="text-3xl font-Fraunces font-bold mb-8">
                   Photography
                 </h2>
-                <p className="text-lg mx-3">
+                <p className="text-md font-semibold">
                   Increase your credibility by getting the most stunning,
                   high-quality photos that improve your business image.
                 </p>
@@ -141,14 +136,14 @@ function App() {
                 alt="Emily R"
                 className="mx-auto rounded-full w-3/12"
               />
-              <p className="my-12 font-Barlow text-lg mx-7">
+              <p className="my-12 font-Barlow text-lg mx-7 text-dark-grayish-blue font-semibold">
                 We put our trust in Sunnyside and they delivered, making sure
                 our needs were met and deadlines were always hit.
               </p>
-              <h3 className="font-Fraunces text-very-dark-desaturated-blue font-bold">
+              <h3 className="font-Fraunces text-2xl text-very-dark-desaturated-blue font-extrabold">
                 Emily R.
               </h3>
-              <h4 className="font-Barlow text-grayish-blue font-semibold">
+              <h4 className="font-Barlow text-lg text-grayish-blue font-semibold">
                 Marketing Director{" "}
               </h4>
             </div>
@@ -158,14 +153,14 @@ function App() {
                 alt="Thomas S"
                 className="mx-auto rounded-full w-3/12"
               />
-              <p className="my-12 font-Barlow text-lg mx-7">
+              <p className="my-12 font-Barlow text-lg mx-7 text-dark-grayish-blue font-semibold">
                 Sunnyside’s enthusiasm coupled with their keen interest in our
                 brand’s success made it a satisfying and enjoyable experience.
               </p>
-              <h3 className="font-Fraunces text-very-dark-desaturated-blue font-bold">
+              <h3 className="font-Fraunces text-2xl text-very-dark-desaturated-blue font-extrabold">
                 Thomas S.
               </h3>
-              <h4 className="font-Barlow text-grayish-blue font-semibold">
+              <h4 className="font-Barlow text-lg text-grayish-blue font-semibold">
                 Chief Operating Officer
               </h4>
             </div>
@@ -175,46 +170,47 @@ function App() {
                 alt="Jennie F"
                 className="mx-auto rounded-full w-3/12"
               />
-              <p className="my-12 font-Barlow text-lg mx-7">
+              <p className="my-12 font-Barlow text-lg mx-7 text-dark-grayish-blue font-semibold">
                 Incredible end result! Our sales increased over 400% when we
                 worked with Sunnyside. Highly recommended!
               </p>
-              <h3 className="font-Fraunces text-very-dark-desaturated-blue font-bold">
+              <h3 className="font-Fraunces text-2xl text-very-dark-desaturated-blue font-extrabold">
                 Jennie F.
               </h3>
-              <h4 className="font-Barlow text-grayish-blue font-semiblod">
+              <h4 className="font-Barlow text-lg text-grayish-blue font-semibold">
                 Business Owner
               </h4>
             </div>
           </div>
         </section>
-        {/* Color Picker */}
-        <section>
-          <div className="p-3 bg-dark-desaturated-cyan"></div>
-          <div className="p-3 bg-dark-blue"></div>
-          <div className="p-3 bg-dark-moderate-cyan"></div>
-          <div className="p-3 bg-very-dark-desaturated-blue"></div>
-          <div className="p-3 bg-very-dark-grayish-blue"></div>
-          <div className="p-3 bg-dark-grayish-blue"></div>
-          <div className="p-3 bg-grayish-blue"></div>
-        </section>
+
+        <div className="p-3 bg-soft-red"></div>
+        <div className="p-3 bg-new-yellow"></div>
+        <div className="p-3 bg-dark-desaturated-cyan"></div>
+        <div className="p-3 bg-dark-blue"></div>
+        <div className="p-3 bg-dark-moderate-cyan"></div>
+        <div className="p-3 bg-moderate-cyan"></div>
+        <div className="p-3 bg-very-dark-desaturated-blue"></div>
+        <div className="p-3 bg-very-dark-grayish-blue"></div>
+        <div className="p-3 bg-dark-grayish-blue"></div>
+        <div className="p-3 bg-grayish-blue"></div>
         {/* Image Gallary */}
         <section>
           <div className="grid grid-cols-2 md:grid-cols-4 g-0">
             <picture>
-              <source media="(min-width:768px)" srcset={milkBottlesDesktop} />
+              <source media="(min-width:768px)" srcSet={milkBottlesDesktop} />
               <img src={milkBottles} alt="Milkbottles" className="w-full" />
             </picture>
             <picture>
-              <source media="(min-width:768px)" srcset={orangeDesktop} />
+              <source media="(min-width:768px)" srcSet={orangeDesktop} />
               <img src={orange} alt="Orange" className="w-full" />
             </picture>
             <picture>
-              <source media="(min-width:768px)" srcset={coneDesktop} />
+              <source media="(min-width:768px)" srcSet={coneDesktop} />
               <img src={cone} alt="Cone" className="w-full" />
             </picture>
             <picture>
-              <source media="(min-width:768px)" srcset={sugarCubeDesktop} />
+              <source media="(min-width:768px)" srcSet={sugarCubeDesktop} />
               <img src={sugarCube} alt="Sugar Cube" className="w-full" />
             </picture>
           </div>
