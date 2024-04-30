@@ -23,15 +23,28 @@ const Header = () => {
           <Hamburger onClick={toggleMenu} />
 
           {isOpen && (
-            <>
-              <div className="w-0 h-0 border-r-white border-r-8 border-b-white border-b-8 border-l-transparent border-l-8 border-t-transparent border-t-8"></div>
-              <ul className="absolute z-10 bg-white w-full py-6 text-center left-0 top-32">
-                <li>About</li>
-                <li>Services</li>
-                <li>Projects</li>
-                <li>Contact</li>
+            <div className="absolute left-0 top-20 z-10 w-full  px-6">
+              <div className="w-0 h-0 ml-auto border-r-white border-r-8 border-b-white border-b-8 border-l-transparent border-l-8 border-t-transparent border-t-8"></div>
+              <ul className="bg-white font-semibold font-Barlow text-lg text-dark-grayish-blue pt-12 pb-14 text-center ">
+                <li className="mb-7">
+                  <a href="#top">About</a>
+                </li>
+                <li className="mb-7">
+                  <a href="#top">Services</a>
+                </li>
+                <li className="mb-7">
+                  <a href="#top">Projects</a>
+                </li>
+                <li className="mt-9">
+                  <a
+                    href="#top"
+                    className="bg-new-yellow uppercase font-Fraunces text-very-dark-desaturated-blue font-bold py-3 px-8 rounded-full"
+                  >
+                    Contact
+                  </a>
+                </li>
               </ul>
-            </>
+            </div>
           )}
         </nav>
       </div>
