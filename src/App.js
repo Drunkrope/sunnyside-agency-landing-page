@@ -31,13 +31,14 @@ function App() {
       <Hearder />
 
       <main>
+        {/* Yellow Egg */}
         <section>
           <div className="flex flex-col-reverse md:flex-row">
-            <div className="basis-6/12 flex flex-col justify-center items-center text-center md:text-left px-6 py-16">
-              <h2 className="font-Fraunces text-very-dark-desaturated-blue font-bold text-4xl">
+            <div className="basis-6/12 flex max-w-lg mx-auto flex-col justify-center items-center text-center md:text-left px-6 py-16">
+              <h2 className="font-Fraunces text-very-dark-desaturated-blue font-bold text-4xl w-full">
                 Transform your brand
               </h2>
-              <p className="my-7 font-Barlow text-lg text-dark-grayish-blue">
+              <p className="my-7 font-Barlow text-lg font-semibold text-dark-grayish-blue">
                 We are a full-service creative agency specializing in helping
                 brands grow fast. Engage your clients through compelling visuals
                 that do most of the marketing for you.
@@ -45,7 +46,7 @@ function App() {
 
               <a
                 href="#top"
-                className="font-Fraunces uppercase text-very-dark-desaturated-blue w-full text-center md:text-left font-bold text-lg relative after:content-[''] after:pb-3 after:bg-new-yellow after:rounded-full after:absolute after:w-32 after:-translate-x-1/2 after:left-1/2 after:bottom-0 after:opacity-20 "
+                className="font-Fraunces uppercase text-very-dark-desaturated-blue w-full md:w-auto md:me-auto text-center md:text-left font-bold text-lg relative after:content-[''] after:pb-3 after:bg-new-yellow after:rounded-full after:absolute after:w-32 after:-translate-x-1/2 after:left-1/2 after:bottom-0 after:opacity-20 "
               >
                 Learn more
               </a>
@@ -58,6 +59,7 @@ function App() {
             </div>
           </div>
         </section>
+        {/* Red Cup */}
         <section>
           <div className="flex flex-col md:flex-row">
             <div className="basis-6/12">
@@ -66,8 +68,8 @@ function App() {
                 <img src={standOut} alt="red glass" className="w-full" />
               </picture>
             </div>
-            <div className="basis-6/12 flex flex-col justify-center items-center text-center md:text-left px-6 py-16">
-              <h2 className="font-Fraunces text-very-dark-desaturated-blue font-bold text-4xl">
+            <div className="basis-6/12 flex max-w-lg mx-auto flex-col justify-center items-center text-center md:text-left px-6 py-16">
+              <h2 className="font-Fraunces text-very-dark-desaturated-blue font-bold text-4xl w-full">
                 Stand out to the right audience
               </h2>
               <p className="my-7 font-Barlow text-lg font-semibold text-dark-grayish-blue">
@@ -78,13 +80,14 @@ function App() {
 
               <a
                 href="#top"
-                className="font-Fraunces uppercase text-very-dark-desaturated-blue w-full text-center md:text-left font-bold text-lg relative after:content-[''] after:pb-3 after:bg-soft-red after:rounded-full after:absolute after:w-32 after:left-1/2 after:-translate-x-1/2 after:bottom-0 after:opacity-20 "
+                className="font-Fraunces uppercase text-very-dark-desaturated-blue w-full md:w-auto md:me-auto text-center md:text-left font-bold text-lg relative after:content-[''] after:pb-3 after:bg-soft-red after:rounded-full after:absolute after:w-32 after:left-1/2 after:-translate-x-1/2 after:bottom-0 after:opacity-20 "
               >
                 Learn more
               </a>
             </div>
           </div>
         </section>
+        {/* Cherry and Orange */}
         <section>
           <div className="grid grid-cols-1 md:grid-cols-2">
             <div className="text-dark-desaturated-cyan text-center relative">
@@ -99,7 +102,7 @@ function App() {
                 <h2 className="text-3xl font-Fraunces font-bold mb-8">
                   Graphic design
                 </h2>
-                <p className="text-md font-semibold">
+                <p className="text-md font-semibold max-w-sm mx-auto">
                   Great design makes you memorable. We deliver artwork that
                   underscores your brand message and captures potential clients’
                   attention.
@@ -115,7 +118,7 @@ function App() {
                 <h2 className="text-3xl font-Fraunces font-bold mb-8">
                   Photography
                 </h2>
-                <p className="text-md font-semibold">
+                <p className="text-md font-semibold max-w-sm mx-auto">
                   Increase your credibility by getting the most stunning,
                   high-quality photos that improve your business image.
                 </p>
@@ -184,16 +187,6 @@ function App() {
           </div>
         </section>
 
-        <div className="p-3 bg-soft-red"></div>
-        <div className="p-3 bg-new-yellow"></div>
-        <div className="p-3 bg-dark-desaturated-cyan"></div>
-        <div className="p-3 bg-dark-blue"></div>
-        <div className="p-3 bg-dark-moderate-cyan"></div>
-        <div className="p-3 bg-moderate-cyan"></div>
-        <div className="p-3 bg-very-dark-desaturated-blue"></div>
-        <div className="p-3 bg-very-dark-grayish-blue"></div>
-        <div className="p-3 bg-dark-grayish-blue"></div>
-        <div className="p-3 bg-grayish-blue"></div>
         {/* Image Gallary */}
         <section>
           <div className="grid grid-cols-2 md:grid-cols-4 g-0">
