@@ -36,22 +36,22 @@ const Header = () => {
           <Hamburger onClick={toggleMenu} className="md:hidden" />
 
           {(isOpen || windowWidth > 768) && (
-            <div className="absolute md:static left-0 top-20 z-10 w-full px-6">
+            <div className="absolute md:static left-0 top-20 z-10 w-full md:w-auto px-6">
               <div className="w-0 h-0 ml-auto md:hidden border-r-white border-r-8 border-b-white border-b-8 border-l-transparent border-l-8 border-t-transparent border-t-8"></div>
               <ul className="bg-white md:bg-transparent md:flex md:justify-end font-semibold font-Barlow text-lg text-dark-grayish-blue md:text-white pt-12 pb-14 md:p-0 text-center ">
-                <li className="mb-7">
+                <li className="mb-7 md:me-10">
                   <a href="#top">About</a>
                 </li>
-                <li className="mb-7">
+                <li className="mb-7 md:me-10">
                   <a href="#top">Services</a>
                 </li>
-                <li className="mb-9">
+                <li className="mb-9 md:me-10">
                   <a href="#top">Projects</a>
                 </li>
-                <li>
+                <li className="md:me-10">
                   <a
                     href="#top"
-                    className="bg-new-yellow md:bg-white uppercase font-Fraunces text-very-dark-desaturated-blue font-bold py-3 px-8 rounded-full"
+                    className="bg-new-yellow md:bg-white hover:bg-opacity-20 uppercase font-Fraunces text-very-dark-desaturated-blue hover:text-white font-bold py-3 px-8 rounded-full"
                   >
                     Contact
                   </a>
@@ -61,8 +61,8 @@ const Header = () => {
           )}
         </nav>
       </div>
-      <div className="absolute left-1/2 top-1/2 md:top-1/3 -translate-y-1/2 -translate-x-1/2">
-        <h1 className="text-center text-white tracking-super text-4xl md:text-6xl md:w-full font-Fraunces font-extrabold uppercase my-10 md:mb-32">
+      <div className="absolute left-1/2 top-1/2 md:top-1/3 -translate-y-1/2 -translate-x-1/2 w-full">
+        <h1 className="text-center text-white tracking-super text-4xl md:text-6xl md:w-full font-Fraunces font-extrabold uppercase my-10 md:my-32">
           We are creatives
         </h1>
 
