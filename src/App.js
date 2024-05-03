@@ -34,7 +34,7 @@ function App() {
         {/* Yellow Egg */}
         <section>
           <div className="flex flex-col-reverse md:flex-row">
-            <div className="basis-6/12 flex max-w-lg mx-auto flex-col justify-center items-center text-center md:text-left px-6 py-16">
+            <div className="basis-6/12 flex max-w-lg mx-auto flex-col justify-center items-center text-center md:text-left px-6 py-16 md:py-0">
               <h2 className="font-Fraunces text-very-dark-desaturated-blue font-bold text-4xl w-full">
                 Transform your brand
               </h2>
@@ -68,7 +68,7 @@ function App() {
                 <img src={standOut} alt="red glass" className="w-full" />
               </picture>
             </div>
-            <div className="basis-6/12 flex max-w-lg mx-auto flex-col justify-center items-center text-center md:text-left px-6 py-16">
+            <div className="basis-6/12 flex max-w-lg mx-auto flex-col justify-center items-center text-center md:text-left px-6 py-16 md:py-0">
               <h2 className="font-Fraunces text-very-dark-desaturated-blue font-bold text-4xl w-full">
                 Stand out to the right audience
               </h2>
@@ -89,7 +89,7 @@ function App() {
         </section>
         {/* Cherry and Orange */}
         <section>
-          <div className="grid grid-cols-1 md:grid-cols-2">
+          <div className="grid grid-cols-1 sm:grid-cols-2">
             <div className="text-dark-desaturated-cyan text-center relative">
               <picture>
                 <source
